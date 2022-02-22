@@ -4,3 +4,15 @@
 <div><span>Id: </span>{{usuario.id}}</div>
 <div><span>Name: </span>{{usuario.name}}</div>
 <div><span>Surname: </span>{{usuario.surname}}</div>
+
+<div>
+  <label for="name">ID: </label>
+  <input id="name" [(ngModel)]="usuario.id" placeholder="id">
+
+  <label for="name">User Name: </label>
+  <input id="name" [(ngModel)]="usuario.name" placeholder="name">
+
+  <label for="name">User Surname: </label>
+  <input id="name" [(ngModel)]="usuario.surname" placeholder="surname">
+
+</div>
