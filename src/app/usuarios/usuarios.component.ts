@@ -31,7 +31,11 @@ export class UsuariosComponent implements OnInit {
   }
 
   onSelect(usuario: Usuario): void {
-    this.selectedUsuario = this.usuario;
+    this.selectedUsuario = usuario;
   }
   //Aquí se declara el método onSelect para que funcione selectedUsuario
+  //El fallo que machaba la vista detalles era la linea 34 que estaba mal escrita, ponia
+  //this-selectedUsuario = this.usuario ; eso por algún motivo no hacía nada, porque lo que queríamos era
+  // pasar los valores de selectedUsuario a la variable usuario, y digamos que se lo estábamos pasando a otra variable distinta.
+  //Por tema de scope
 }
