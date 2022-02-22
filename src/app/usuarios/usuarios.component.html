@@ -17,3 +17,14 @@
 <br>
 
 </div>
+
+<h2>Mis Usuarios</h2>
+<ul class="usuarios">
+  <li *ngFor="let usuario of usuarios">
+   <!-- <button [class.selected]="usuario === selectedUsuario" type="button" (click)="onSelect(usuario)">-->
+      <span class="badge">{{usuario.id}}</span>
+      <span class="name">{{usuario.name}}</span>
+      <span class="name">{{usuario.surname}}</span>
+  <!--  </button>-->
+  </li>
+</ul>
