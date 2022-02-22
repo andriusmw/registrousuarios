@@ -18,9 +18,9 @@ export class UsuariosComponent implements OnInit {
   //Creo una variable llamada usuarios y le paso el valor, contenido y tipo del array USUARIOS del mock mock-usuarios
 
   usuario : Usuario = {
-    id: 1,
-    name: 'Windstorm',
-    surname: 'Snow'
+    id: 1 ,
+    name: "windstorm",
+    surname: "Snow"
   }
   //Creo una variable llamada usuario, de tipo objeto que va a tener el contenido y estructura de Usuario. Que lo saco de la interfaz
 
