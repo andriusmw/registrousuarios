@@ -9,6 +9,11 @@ import { USUARIOS } from '../mock-usuarios';
 })
 export class UsuariosComponent implements OnInit {
 
+
+  selectedUsuario?: Usuario;
+  //Hay que poner el interrogante porque puede no ser llamado.
+
+
   usuarios = USUARIOS;
   //Creo una variable llamada usuarios y le paso el valor, contenido y tipo del array USUARIOS del mock mock-usuarios
 
@@ -24,4 +29,8 @@ export class UsuariosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSelect(usuario: Usuario): void {
+    this.selectedUsuario = this.usuario;
+  }
+  //Aquí se declara el método onSelect para que funcione selectedUsuario
 }
