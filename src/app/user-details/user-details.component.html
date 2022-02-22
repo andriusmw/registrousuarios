@@ -1,0 +1,14 @@
+<p>user-details works!</p>
+<div *ngIf="usuario">
+
+  <h2>{{usuario.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{usuario.id}}</div>
+  <div>
+    <label for="hero-name">Username: </label>
+    <input id="hero-name" [(ngModel)]="usuario.name" placeholder="name">
+
+    <label for="hero-name">Surname: </label>
+    <input id="hero-name" [(ngModel)]="usuario.surname" placeholder="surname">
+  </div>
+
+</div>

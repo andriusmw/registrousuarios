@@ -14,6 +14,7 @@ export class UsuariosComponent implements OnInit {
   //Hay que poner el interrogante porque puede no ser llamado.
 
 
+
   usuarios = USUARIOS;
   //Creo una variable llamada usuarios y le paso el valor, contenido y tipo del array USUARIOS del mock mock-usuarios
 

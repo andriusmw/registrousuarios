@@ -21,24 +21,16 @@
 <h2>Mis Usuarios</h2>
 <ul class="usuarios">
   <li *ngFor="let usuario of usuarios">
-
+    <button type="button" (click)="onSelect(usuario)" [class.selected]="usuario === selectedUsuario">
       <span class="badge">{{usuario.id}}</span>
       <span class="name">{{usuario.name}}</span>
       <span class="name">{{usuario.surname}}</span>
-      <button type="button" (click)="onSelect(usuario)" [class.selected]="usuario === selectedUsuario">SELECT THIS</button>
+     </button>
   </li>
 </ul>
 
 
-<div *ngIf="selectedUsuario">
-<h2>{{selectedUsuario.name | uppercase}} Details</h2>
-<div>id: {{selectedUsuario.id}}</div>
-<div>
-  <label for="hero-name">Hero Name: </label>
-  <input id="hero-name" [(ngModel)]="selectedUsuario.name" placeholder="name">
 
-  <label for="hero-name">Hero Surname: </label>
-  <input id="hero-name" [(ngModel)]="selectedUsuario.surname" placeholder="surname">
 
-</div>
-</div>
+
+<app-user-details [usuario]="selectedUsuario"></app-user-details>
