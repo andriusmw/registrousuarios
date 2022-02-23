@@ -32,7 +32,8 @@ export class UsuariosComponent implements OnInit {
   //los servicios se declaran en el constructor
 
   getUsuarios(): void {
-    this.usuarios = this.usuarioService.getUsuarios();
+    this.usuarioService.getUsuarios()
+        .subscribe(usuarios => this.usuarios = usuarios);
   }
   //Vuelve a declarar getUsuarios, para conectar con el servicio y que este conecte con el mock
 
