@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../usuario';
 //import { USUARIOS } from '../mock-usuarios';
 import { UsuarioService } from '../usuario.service';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-usuarios',
@@ -28,7 +29,7 @@ export class UsuariosComponent implements OnInit {
   }
   //Creo una variable llamada usuario, de tipo objeto que va a tener el contenido y estructura de Usuario. Que lo saco de la interfaz
 
-  constructor(private usuarioService: UsuarioService) { }
+  constructor(private usuarioService: UsuarioService,private messageService: MessageService) { }
   //los servicios se declaran en el constructor
 
   getUsuarios(): void {
@@ -44,6 +45,7 @@ export class UsuariosComponent implements OnInit {
 
   onSelect(usuario: Usuario): void {
     this.selectedUsuario = usuario;
+    this.messageService.add(`UsuariosComponent: Selected usaer id=${usuario.id}`);
   }
   //Aquí se declara el método onSelect para que funcione selectedUsuario
   //El fallo que machaba la vista detalles era la linea 34 que estaba mal escrita, ponia
