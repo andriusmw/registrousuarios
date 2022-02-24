@@ -22,6 +22,8 @@ export class InMemoryDataService implements InMemoryDbService {
     ];
     return {usuarios};
   }
+  //el valor surname no lo hemos declarado en esta const usuarios, por eso no aparece en
+  //la página web. hay que crearlo aquí ya que ya no llama al mock, sino a la api, a esta const usuarios.
 
   // Overrides the genId method to ensure that a hero always has an id.
   // If the heroes array is empty,
