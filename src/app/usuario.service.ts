@@ -11,21 +11,21 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class UsuarioService {
 
 
-
-  getUsuarios(): Observable<Usuario[]> {
-    const usuarios = of(USUARIOS);
-    this.messageService.add('UsuarioService: fetched USUARIOS');
-    return usuarios;
-  }
+/** GET heroes from the server */
+getUsuarios(): Observable<Usuario[]> {
+  return this.http.get<Usuario[]>(this.usuariosUrl)
+  //Recibe la lista de usuarios de la API en vez de del mock.
+}
 
   /** Log a HeroService message with the MessageService */
   private log(message: string) {
   this.messageService.add(`UsuarioService: ${message}`);
 }
-
+private usuariosUrl = 'api/usuarios';  // URL to web api
 
   constructor(private messageService: MessageService,
     private http: HttpClient,
+
 
     )  { }
 }
