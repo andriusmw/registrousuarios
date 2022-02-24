@@ -32,3 +32,9 @@ export class InMemoryDataService implements InMemoryDbService {
     return usuarios.length > 0 ? Math.max(...usuarios.map(usuario => usuario.id)) + 1 : 11;
   }
 }
+
+//The in-memory-data.service.ts file will take over the function of mock-heroes.ts. However,
+//don't delete mock-heroes.ts yet, as you still need it for a few more steps of this tutorial.
+//
+//When the server is ready, you'll detach the In-memory Web API, and the application's requests
+ //will go through to the server.
