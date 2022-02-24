@@ -7,6 +7,8 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 import { FormsModule } from '@angular/forms';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { MessagesComponent } from './messages/messages.component'; // <-- NgModel lives here
+import { HttpClientModule } from '@angular/common/http';
+//añadimos los protocolos http para interactuar con servidores (añadir, borrar, editar)
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { MessagesComponent } from './messages/messages.component'; // <-- NgMode
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
