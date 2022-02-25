@@ -56,6 +56,19 @@ getUsuario(id: number): Observable<Usuario> {
   );
 }
 
+/** PUT: update the hero on the server */
+updateHero(hero: Usuario): Observable<any> {
+  return this.http.put(this.usuariosUrl, hero, this.httpOptions).pipe(
+    tap(_ => this.log(`updated hero id=${hero.id}`)),
+    catchError(this.handleError<any>('updateHero'))
+  );
+}
+
+httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
+
+
   constructor(private messageService: MessageService,
     private http: HttpClient,
 
