@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 //añadimos los protocolos http para interactuar con servidores (añadir, borrar, editar)
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { AddUserComponent } from './add-user/add-user.component';
 // importando webapi
 
 @NgModule({
@@ -18,7 +19,8 @@ import { InMemoryDataService } from './in-memory-data.service';
     AppComponent,
     UsuariosComponent,
     UserDetailsComponent,
-    MessagesComponent
+    MessagesComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,

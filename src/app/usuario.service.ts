@@ -68,6 +68,13 @@ httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
+/** POST: add a new hero to the server */
+addUsuario(hero: Usuario): Observable<Usuario> {
+  return this.http.post<Usuario>(this.usuariosUrl, hero, this.httpOptions).pipe(
+    tap((newHero: Usuario) => this.log(`added hero w/ id=${newHero.id}`)),
+    catchError(this.handleError<Usuario>('addHero'))
+  );
+}
 
   constructor(private messageService: MessageService,
     private http: HttpClient,
