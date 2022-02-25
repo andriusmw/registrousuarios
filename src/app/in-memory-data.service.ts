@@ -9,16 +9,16 @@ export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     //Simula una base de datos a la que atacar
     const usuarios = [
-      { id: 11, name: 'Dr Nice' },
-      { id: 12, name: 'Narco' },
-      { id: 13, name: 'Bombasto' },
-      { id: 14, name: 'Celeritas' },
-      { id: 15, name: 'Magneta' },
-      { id: 16, name: 'RubberMan' },
-      { id: 17, name: 'Dynama' },
-      { id: 18, name: 'Dr IQ' },
-      { id: 19, name: 'Magma' },
-      { id: 20, name: 'Tornado' }
+      { id: 11, name: 'Dr Nice', surname: 'Dr Nice'},
+  { id: 12, name: 'Narco', surname: "spider" },
+  { id: 13, name: 'Bombasto', surname: "oritrón" },
+  { id: 14, name: 'Celeritas', surname:"Dapillah" },
+  { id: 15, name: 'Magneta', surname: "Ontto" },
+  { id: 16, name: 'RubberMan', surname:"Ontta" },
+  { id: 17, name: 'Dynama' , surname:"Parker"},
+  { id: 18, name: 'Dr IQ', surname: "Williams" },
+  { id: 19, name: 'Magma', surname:"BA" },
+  { id: 20, name: 'Tornado',surname:"2" }
     ];
     return {usuarios};
   }
