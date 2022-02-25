@@ -24,23 +24,20 @@ export class AddUserComponent implements OnInit {
         this.usuarios.push(usuario);
       });
   }
+  //Función para añadir usuario con nombre SOLAMENTE.
 
 */
 
 add(name: string, surname: string): void {
   name = name.trim();
   surname =surname.trim();
-  if (!name) { return; }
-  this.usuarioService.addUsuario({ name } as Usuario)
+  if (!name && !surname) { return; }
+  this.usuarioService.addUsuario({ name,surname } as Usuario)
     .subscribe(usuario => {
       this.usuarios.push(usuario);
     });
-    if (!surname) { return; }
-    this.usuarioService.addUsuario({ surname } as Usuario)
-      .subscribe(usuario => {
-        this.usuarios.push(usuario);
-      });
 
+//Función para añadir usuario con nombre y apellido(name  y surname)
 
 
 }
