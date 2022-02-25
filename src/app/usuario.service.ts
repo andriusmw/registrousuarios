@@ -76,6 +76,16 @@ addUsuario(hero: Usuario): Observable<Usuario> {
   );
 }
 
+/** DELETE: delete the hero from the server */
+deleteUsuario(id: number): Observable<Usuario> {
+  const url = `${this.usuariosUrl}/${id}`;
+
+  return this.http.delete<Usuario>(url, this.httpOptions).pipe(
+    tap(_ => this.log(`deleted hero id=${id}`)),
+    catchError(this.handleError<Usuario>('deleteHero'))
+  );
+}
+
   constructor(private messageService: MessageService,
     private http: HttpClient,
 

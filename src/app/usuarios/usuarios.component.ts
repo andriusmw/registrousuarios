@@ -53,6 +53,10 @@ export class UsuariosComponent implements OnInit {
   // pasar los valores de selectedUsuario a la variable usuario, y digamos que se lo estábamos pasando a otra variable distinta.
   //Por tema de scope
 
+  delete(usuario: Usuario): void {
+    this.usuarios = this.usuarios.filter(h => h !== usuario);
+    this.usuarioService.deleteUsuario(usuario.id).subscribe();
+  }
 
 
 
