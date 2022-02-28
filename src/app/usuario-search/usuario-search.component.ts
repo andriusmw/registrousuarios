@@ -19,7 +19,7 @@ import { UsuarioService } from '../usuario.service';
   styleUrls: [ './usuario-search.component.css' ]
 })
 export class UsuarioSearchComponent implements OnInit {
-  heroes$!: Observable<Usuario[]>;
+  usuarios$!: Observable<Usuario[]>;
   private searchTerms = new Subject<string>();
 
   constructor(private usuarioService: UsuarioService) {}
@@ -29,10 +29,10 @@ export class UsuarioSearchComponent implements OnInit {
     this.searchTerms.next(term);
   }
 
-  usuarios: Usuario[] = []
+
 
   ngOnInit(): void {
-    this.usuarios = this.searchTerms.pipe(
+    this.usuarios$ = this.searchTerms.pipe(
       // wait 300ms after each keystroke before considering the term
       debounceTime(300),
 
