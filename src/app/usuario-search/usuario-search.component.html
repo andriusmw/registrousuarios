@@ -5,10 +5,29 @@
   <input #searchBox id="search-box" (input)="search(searchBox.value)" />
 
   <ul class="search-result">
+    <!--
     <li *ngFor="let usuario of usuarios$ | async" >
       <a routerLink="/detail/{{usuario.id}}">
         {{usuario.name}}
       </a>
     </li>
+  -->
+  <!--PRUEBA A VER SI ENLAZA LA VISTA DETALLES A LA LISTA QUE MUESTRA DE BÚSQUEDA-->
+  <ul class="search-result">
+    <li *ngFor="let usuario of usuarios$ | async">
+      <button type="button" (click)="onSelect(usuario)" [class.selected]="usuario === selectedUsuario">
+        <span class="badge">{{usuario.id}} </span>
+        <span class="name">{{usuario.name}} </span>
+        <span class="name">{{usuario.surname}} </span>
+       </button>
+       <button type="button" class="delete" title="delete hero"
+    (click)="delete(usuario)">X</button>
+    </li>
+  </ul>
+
+
+
   </ul>
 </div>
+
+<app-user-details [usuario]="selectedUsuario"></app-user-details>
