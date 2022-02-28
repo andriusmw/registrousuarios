@@ -86,6 +86,22 @@ deleteUsuario(id: number): Observable<Usuario> {
   );
 }
 
+
+/* GET heroes whose name contains search term */
+searchUsuarios(term: string): Observable<Usuario[]> {
+  if (!term.trim()) {
+    // if not search term, return empty hero array.
+    return of([]);
+  }
+  return this.http.get<Usuario[]>(`${this.usuariosUrl}/?name=${term}`).pipe(
+    tap(x => x.length ?
+       this.log(`found usuarios matching "${term}"`) :
+       this.log(`no usuarios matching "${term}"`)),
+    catchError(this.handleError<Usuario[]>('searchusuarios', []))
+  );
+}
+
+
   constructor(private messageService: MessageService,
     private http: HttpClient,
 
