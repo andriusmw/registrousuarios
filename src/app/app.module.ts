@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { AddUserComponent } from './add-user/add-user.component';
+import { UsuarioSearchComponent } from './usuario-search/usuario-search.component';
 // importando webapi
 
 @NgModule({
@@ -20,7 +21,8 @@ import { AddUserComponent } from './add-user/add-user.component';
     UsuariosComponent,
     UserDetailsComponent,
     MessagesComponent,
-    AddUserComponent
+    AddUserComponent,
+    UsuarioSearchComponent
   ],
   imports: [
     BrowserModule,
