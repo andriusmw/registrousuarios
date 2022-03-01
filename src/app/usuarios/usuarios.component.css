@@ -89,3 +89,7 @@ div.lista {
  .botoninicio a {
   background-color: wheat;
 }
+
+.delete {
+  background-color: indianred;
+}

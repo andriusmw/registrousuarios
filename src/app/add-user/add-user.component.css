@@ -1,0 +1,18 @@
+/*----------------------------*/
+
+.anadir {
+  border-style: outset;
+}
+
+.anadir input{
+  background-color: whitesmoke;
+}
+
+label {
+  padding-left: 1em;
+}
+
+* {
+  background-color: gainsboro;
+  border-color: aqua;
+}

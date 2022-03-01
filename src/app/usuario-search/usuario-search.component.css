@@ -52,6 +52,11 @@ div#search-component {
   border-style: outset;
 }
 
+.delete {
+  background-color: indianred;
+}
+
+
 * {
   background-color: gainsboro;
   border-color: aqua;
