@@ -4,7 +4,8 @@ label {
   display: block;
   font-weight: bold;
   font-size: 1.2rem;
-  margin-top: 1rem;
+  /*margin-top: 1rem;*/
+  padding-top: 1em;
   margin-bottom: .5rem;
 
 }
@@ -14,6 +15,7 @@ input {
   max-width: 600px;
   box-sizing: border-box;
   display: block;
+
 }
 
 input:focus {
@@ -44,4 +46,13 @@ li {
 ul.search-result {
   margin-top: 0;
   padding-left: 0;
+}
+
+div#search-component {
+  border-style: outset;
+}
+
+* {
+  background-color: gainsboro;
+  border-color: aqua;
 }
