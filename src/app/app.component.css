@@ -1,6 +1,16 @@
-
+/*-----------------------------CABECERA , BARRA NAVEGACIÓN-----------------------*/
 .buttonnav {
 
 margin-left: 2em;
 
+}
+
+nav {
+  background-color: cornflowerblue;
+}
+
+
+.rotulo {
+  background-color: cornflowerblue;
+  color: aliceblue;
 }
