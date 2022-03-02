@@ -3,6 +3,7 @@
 .inicio {
   border-style: outset;
   min-height: 70vh;
+  padding-left: 1em;
 }
 
 .inicio input{

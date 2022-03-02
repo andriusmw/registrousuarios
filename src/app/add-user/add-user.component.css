@@ -1,5 +1,9 @@
 /*----------------------------*/
 
+.add-button {
+  margin-left: 1em;
+}
+
 .anadir {
   border-style: outset;
   min-height: 70vh;
