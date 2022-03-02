@@ -2,6 +2,7 @@
 
 .inicio {
   border-style: outset;
+  min-height: 70vh;
 }
 
 .inicio input{

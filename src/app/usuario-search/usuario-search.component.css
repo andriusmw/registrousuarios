@@ -50,6 +50,7 @@ ul.search-result {
 
 div#search-component {
   border-style: outset;
+  min-height: 70vh;
 }
 
 .delete {

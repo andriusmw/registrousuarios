@@ -2,6 +2,7 @@
 
 .anadir {
   border-style: outset;
+  min-height: 70vh;
 }
 
 .anadir input{
