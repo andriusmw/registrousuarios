@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddUserComponent } from './add-user/add-user.component';
+import { InicioComponent } from './inicio/inicio.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { UsuarioSearchComponent } from './usuario-search/usuario-search.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
@@ -11,7 +12,9 @@ const routes: Routes = [
   { path: 'adduser', component: AddUserComponent },
   { path: 'detail/{{usuario.id}}', component: UserDetailsComponent },
   { path: 'search', component: UsuarioSearchComponent },
-  { path: '', redirectTo: '', pathMatch: 'full' }
+  { path: 'inicio', component: InicioComponent},
+  { path: '', redirectTo: 'inicio', pathMatch: 'full' }
+ // { path: '', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({
