@@ -45,7 +45,8 @@ li {
 
 ul.search-result {
   margin-top: 0;
-  padding-left: 0;
+  padding-left: 1em;
+    padding-top: 1em;
 }
 
 div#search-component {

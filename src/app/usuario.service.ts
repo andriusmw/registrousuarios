@@ -11,6 +11,8 @@ import { catchError, map, tap } from 'rxjs/operators'; //añadiendo manejo de er
 })
 export class UsuarioService {
 
+
+
   /**
  * Handle Http operation that failed.
  * Let the app continue.
@@ -73,8 +75,14 @@ addUsuario(hero: Usuario): Observable<Usuario> {
   return this.http.post<Usuario>(this.usuariosUrl, hero, this.httpOptions).pipe(
     tap((newHero: Usuario) => this.log(`added hero w/ id=${newHero.id}`)),
     catchError(this.handleError<Usuario>('addHero'))
+
+
+
+
   );
 }
+
+
 
 /** DELETE: delete the hero from the server */
 deleteUsuario(id: number): Observable<Usuario> {

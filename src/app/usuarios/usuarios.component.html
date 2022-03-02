@@ -10,7 +10,7 @@
   </nav>
 
 
-<h2>Mis Usuarios</h2>
+<h2 style="padding-left: 1em;">Mis Usuarios</h2>
 <ul class="usuarios">
   <li *ngFor="let usuario of usuarios">
     <button type="button" (click)="onSelect(usuario)" [class.selected]="usuario === selectedUsuario">
@@ -24,6 +24,6 @@
 </ul>
 
 
-<app-user-details [usuario]="selectedUsuario"></app-user-details>
+<app-user-details [usuario]="selectedUsuario" ></app-user-details>
 
 </div>
